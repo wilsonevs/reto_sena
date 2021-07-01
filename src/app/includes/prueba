@@ -1,0 +1,70 @@
+const postIndex = (req, res) => {
+  const { username, passw } = req.body;
+  console.log(req.body);
+  connection.query("SELECT * FROM tb_usuario WHERE username = ? ",[username], (err, result) => {
+      if (result.length === 0 && result.length === 'admin') {
+        connection.query("SELECT * FROM tb_usuario WHERE passw = ? ",[passw], (err, result) => {
+            if (result.length === 0 && result.length === 'admon123') {
+            req.session.loggedin = true;
+            req.session.username = result[0].username;
+            res.redirect("/usuarios_registrados");
+
+          } else {
+                  res.render("index.ejs", {
+                  login: false,
+                  alert: true,
+                  alertTitle: "Invalido",
+                  alertMessage: "Usuario Inconrrectas",
+                  alertIcon: "error",
+                  showConfirmButton: false,
+                  timer: 3500,
+                  ruta: "/",});
+                }
+          });
+      } else {
+        res.render("index.ejs", {
+          login: false,
+          alert: true,
+          alertTitle: "Invalido",
+          alertMessage: "Contraseña Inconrrectas",
+          alertIcon: "error",
+          showConfirmButton: false,
+          timer: 3500,
+          ruta: "/",
+        });
+   
+      }
+    }
+  );
+};
+
+
+
+
+const postIndex = (req, res) => {
+  const { username, passw } = req.body;
+  console.log(req.body);
+  connection.query(
+    "SELECT * FROM tb_usuario WHERE username = ? ",
+    [username], (err, result) => {
+      // if (result.length === 0 ||!(await bcryptjs.compare(passw, result[0].passw))) {
+        if ( username === "admin" || passw === "admon123" ) {
+          req.session.loggedin = true;
+          req.session.username = result[0].username;
+          res.redirect("/usuarios_registrados");
+      } else {
+        res.render("index.ejs", {
+          login: false,
+          alert: true,
+          alertTitle: "Invalido",
+          alertMessage: "Usuario y/o Contraseña Inconrrectas",
+          alertIcon: "error",
+          showConfirmButton: false,
+          timer: 3500,
+          ruta: "/",
+        });
+   
+      }
+    }
+  );
+};

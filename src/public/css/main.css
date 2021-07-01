@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* Colores */
+/* Fuentes */
+.primary {
+  color: #8C8C8C;
+}
+
+.bg-primary {
+  background-color: #8C8C8C;
+}
+
+.blanco {
+  color: #FFFFFF;
+}
+
+.negro {
+  color: #8C8C8C;
+}
+
+/* Fuentes */
+.letraTitulo {
+  font-family: 'Roboto', sans-serif;
+}
+
+.letraTexto {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Tamaño */
+.font-6 {
+  font-size: 0.6rem;
+}
+
+.font-7 {
+  font-size: 0.7rem;
+}
+
+.font-8 {
+  font-size: 0.8rem;
+}
+
+.font-9 {
+  font-size: 0.9rem;
+}
+
+.font-10 {
+  font-size: 1rem;
+}
+
+.font-11 {
+  font-size: 1.1rem;
+}
+
+.font-12 {
+  font-size: 1.2rem;
+}
+
+.font-13 {
+  font-size: 1.3rem;
+}
+
+.font-14 {
+  font-size: 1.4rem;
+}
+
+.font-15 {
+  font-size: 1.5rem;
+}
+
+.font-16 {
+  font-size: 1.6rem;
+}
+
+.font-17 {
+  font-size: 1.7rem;
+}
+
+.font-18 {
+  font-size: 1.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #757575;
+  background: -webkit-gradient(linear, left top, right top, from(#9E9E9E), to(#BDBDBD));
+  background: linear-gradient(to right, #9E9E9E, #BDBDBD);
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Colores */
+/* Fuentes */
+.primary {
+  color: #8C8C8C;
+}
+
+.bg-primary {
+  background-color: #8C8C8C;
+}
+
+.blanco {
+  color: #FFFFFF;
+}
+
+.negro {
+  color: #8C8C8C;
+}
+
+/* Fuentes */
+.letraTitulo {
+  font-family: 'Roboto', sans-serif;
+}
+
+.letraTexto {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Tamaño */
+.font-6 {
+  font-size: 0.6rem;
+}
+
+.font-7 {
+  font-size: 0.7rem;
+}
+
+.font-8 {
+  font-size: 0.8rem;
+}
+
+.font-9 {
+  font-size: 0.9rem;
+}
+
+.font-10 {
+  font-size: 1rem;
+}
+
+.font-11 {
+  font-size: 1.1rem;
+}
+
+.font-12 {
+  font-size: 1.2rem;
+}
+
+.font-13 {
+  font-size: 1.3rem;
+}
+
+.font-14 {
+  font-size: 1.4rem;
+}
+
+.font-15 {
+  font-size: 1.5rem;
+}
+
+.font-16 {
+  font-size: 1.6rem;
+}
+
+.font-17 {
+  font-size: 1.7rem;
+}
+
+.font-18 {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: #8C8C8C;
+}
+
+a:hover {
+  color: #FFFFFF;
+}
+
+.bg_fondo {
+  background-color: #CB302B;
+  background-image: url("../utils/logo/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+}
+/*# sourceMappingURL=main.css.map */

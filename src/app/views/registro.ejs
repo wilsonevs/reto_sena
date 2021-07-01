@@ -1,0 +1,104 @@
+<%- include("../includes/head.ejs") %> 
+<%- include("../includes/header.ejs") %> 
+
+
+<div class="container w-75 bg-light my-5 rounded-3 shadow">
+    <div class="row align-items-stretch">
+        <div class="col bg_fondo d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start">
+            
+        </div>
+        <div class="col bg-white p-5 rounded-end">
+            <!-- <div class="text-end">
+                <img class="logo_formulario py-5" src="src/utils/logo/logo_transparente.gif" alt="logo grupo syz">
+            </div> -->
+
+            <h2 class="fw-bold text-center mt-5 mb-3">Contactanos</h2>
+            <!-- Inicio Login -->
+            <form action="registro" method="POST">
+                <div class=" mb-3">
+                    <label for="username" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Ingresar Usuario" autofocus required>
+                </div>
+                <div class=" mb-3">
+                    <label for="firstname" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Ingresar Nombre" autofocus required>
+                </div>
+                <div class=" mb-3">
+                    <label for="lastname" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Ingresar Apellido" required>
+                </div>
+                <div class=" mb-3">
+                    <label for="lastname" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="passw" name="passw" placeholder="Ingresar una contraseña" required>
+                </div>
+                <div style="height: 50px;"></div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-danger mb-3">Registrar</button>
+                </div>
+                <div style="height: 10px;"></div>
+                <div class="row text-center">
+                    <label> Ya tengo una <a href="/" style="color: #CB302B; font-weight: bold;">Cuenta</a></label>
+                </div>
+                
+            </form>
+            <!-- Fin Login -->
+            <div style="height: 10px;"></div>
+            <!-- Inicio Redes Sociales -->
+            <div class="container w-100 ">
+                <div class="row text-center">
+                    <div class="col-12 my-3">Redes Sociales del aprendiz</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-outline-dark w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <a href="https://www.facebook.com/SYZColombia/?ref=br_tf&epa=SEARCH_BOX" target="_blank"><img src="src/utils/img/facebook.png" width="32" alt=""></a>
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    <a href="https://www.facebook.com/SYZColombia/?ref=br_tf&epa=SEARCH_BOX" target="_blank">Facebook</a>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-dark w-100 my-1">
+                            <div class="row align-items-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <a href="https://www.linkedin.com/company/syz-colombia" target="_blank"><img src="src/utils/img/linkedin.png" width="32" alt=""></a>
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+                                    <a href="https://www.linkedin.com/company/syz-colombia" target="_blank">Linkedin</a>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Redes Sociales -->
+
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("../includes/footer.ejs") %>
+
+<!-- Iniciar alerta -->
+
+<% if(typeof alert !="undefined") { %>
+    <script>
+        Swal.fire({
+            title: '<%= alertTitle  %>',
+            text: '<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton:'<%= showConfirmButton %>',
+            timer:  '<%= timer %>',
+        }).then(()=>{
+            window.location= '/<%= ruta %>'
+        })
+    </script>
+<% } %>
+    
+<!-- Fin alerta -->

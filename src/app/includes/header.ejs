@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <a class="navbar-brand mx-5" href="<%=login === true ? 'perfil' : '/'%>"><h2 class="text-warning"><img src="src/utils/logo/logo_menu.png" alt="" width="55" height="55" class="d-inline-block align-text-top"></h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mob-navbar">
+          <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="<%=login === true ? 'usuarios_registrados' : '/'%>"><%=login === true ? 'Usuarios Registrados' : null%></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="<%=login === true ? 'usuarios_activos' : null%>"><%=login === true ? 'Usuarios Activos' : null%></a>
+              </li>
+          </ul>
+          <form class="d-flex">
+            <a class="mt-2 me-5" style="text-transform: uppercase;" href="<%=login === true ? 'perfil' : "/" %>"><%= login===true ? username : 'Login' %></a>
+            <a class="<%=login === true ? "btn btn-warning" :  "mt-2" %>" style="text-transform: uppercase;" href="<%=login === true ? 'logout' :  '/registro'%>">
+              <%=login === true ? 'Cerrar cesión' : 'Registro' %></a>
+            
+          </form>
+      </div>
+  </div>
+</nav>
+

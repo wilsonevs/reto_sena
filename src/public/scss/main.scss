@@ -1,0 +1,16 @@
+@import "_metodos";
+
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #757575;
+    background: linear-gradient(to right,#9E9E9E, #BDBDBD);
+    font-family: $noto_sans;
+}
+
+@import "_formulario";
+

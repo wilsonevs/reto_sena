@@ -1,0 +1,21 @@
+@import "_metodos";
+
+a{
+    text-decoration: none;
+    color: $negro;
+}
+
+a:hover{
+    color: $blanco;
+}
+
+
+
+.bg_fondo{
+    background-color: $rojo_persa;
+    background-image: url("../utils/logo/logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width:50%;
+    
+}
